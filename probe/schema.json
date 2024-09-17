@@ -1,0 +1,41 @@
+{
+  "type": "object",
+  "properties": {
+    "config": {
+      "type": "object",
+      "properties": {
+        "target": {
+          "type": "string",
+          "description": "URL of the Git repository or the SSH server address."
+        },
+        "repo_type": {
+          "type": "string",
+          "description": "The type of the repository (e.g., 'gitlab' or 'github')."
+        },
+        "project": {
+          "type": "string",
+          "description": "The name or ID of the project in the Git repository."
+        },
+        "artifact_path": {
+          "type": "string",
+          "description": "The path to the artifact within the project's repository structure."
+        },
+        "label_columns": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Array containing the names of the label columns in the dataset."
+        }
+      },
+      "required": [
+        "target",
+        "repo_type",
+        "project",
+        "artifact_path",
+        "label_columns"
+      ]
+    }
+  }
+}
+
